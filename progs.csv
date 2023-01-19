@@ -27,7 +27,7 @@ A,gtk-theme-arc-gruvbox-git,gives the dark GTK theme used in MJR.
 ,man-db,lets you read man pages of programs.
 ,ncmpcpp,a ncurses interface for music with multiple formats and a powerful tag editor.
 ,newsboat,is a terminal RSS client.
-A,brave,the default browser of MJR.
+A,brave-bin,the default browser of MJR.
 ,noto-fonts,is an expansive font package.
 ,noto-fonts-emoji,is an emoji font.
 ,ntfs-3g,allows accessing NTFS partitions.
@@ -36,6 +36,16 @@ A,brave,the default browser of MJR.
 ,pipewire-jack,jack sound system.
 ,qjackctl,gui set sound.
 ,pavucontrol,set sound.
+,os-prober,for dual boot.
+A,wqy-microhei,chinese fonts.
+A,ttf-joypixels,emoji.
+A,ttf-material-design-icons,fonts.
+A,nerd-fonts-jetbrains-mono,nerd font.
+A,ttf-firacode-nerd,firacode
+A,wqy-zenhei,chinese font.
+,the_silver_searcher,for fzf.
+,ripgrep,for nvim live_grep(rg).
+,xfce4-power-manager,power manager.
 ,pulsemixer,is an audio controller.
 A,sc-im,is an Excel-like terminal spreadsheet manager.
 ,maim,can take quick screenshots at your request.
@@ -64,14 +74,4 @@ G,https://github.com/masterj122517/dwm.git,is the window manager.
 ,slock,"allows you to lock your computer, and quickly unlock with your password."
 ,socat,is a utility which establishes two byte streams and transfers data between them.
 ,moreutils,is a collection of useful unix tools.
-,os-prober,for dual boot.
-A,wqy-microhei,chinese fonts.
-A,ttf-joypixels,emoji.
-A,ttf-material-design-icons,fonts.
-A,nerd-fonts-jetbrains-mono,nerd font.
-A,ttf-firacode-nerd,firacode
-A,wqy-zenhei,chinese font.
-A,the_silver_searcher,for fzf.
-A,ripgrep,for nvim live_grep(rg).
-,xfce4-power-manager,power manager.
 

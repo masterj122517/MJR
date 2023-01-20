@@ -85,5 +85,11 @@ G,https://github.com/masterj122517/dwm.git,is the window manager.
 ,shotgun,take screenshots.
 ,hacksaw,range.
 ,fd,file finder.
-
+,fcitx5,input method.
+,fcitx5-qt,input method.
+,fcitx5-gtk,input method.
+,fcitx5-config-qt,input method.
+,fcitx5-material-color,input method.
+,fcitx5-im,input method.
+,fcitx5-rime,input method. 
 

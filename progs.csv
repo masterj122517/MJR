@@ -39,6 +39,10 @@ A,gtk-theme-arc-gruvbox-git,gives the dark GTK theme used in MJR.
 ,pavucontrol,set sound.
 ,os-prober,for dual boot.
 A,wqy-microhei,chinese fonts.
+,wqy-bitmapfont,chinese fonts.
+A,adobe-source-han-mono-cn-fonts,chinese font.
+A,adobe-source-han-sans-cn-fonts,chinese font.
+A,adobe-source-han-serif-cn-fonts,chinese font.
 A,ttf-joypixels,emoji.
 A,ttf-material-design-icons,fonts.
 A,nerd-fonts-jetbrains-mono,nerd font.

@@ -5,9 +5,9 @@
 ,polkit,manages user policies.
 ,ttf-linux-libertine,provides the sans and serif fonts for MJR.
 ,ttf-font-awesome,provides extended glyph support.
-A,ranger,is an extensive terminal file manager that everyone likes.
+,ranger,is an extensive terminal file manager that everyone likes.
 ,ueberzug,enables previews in the lf file manager.
-,picom-tryone-git,is for transparency and removing screen-tearing.
+,picom-git,is for transparency and removing screen-tearing.
 ,xorg-xprop,is a tool for detecting window properties.
 ,network-manager-applet,wifi.
 ,arandr,allows the user to customize monitor arrangements.

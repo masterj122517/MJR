@@ -148,10 +148,6 @@ gitmakeinstall() {
 	cd /tmp || return 1
 }
 
-packerinstall(){
-    git clone --depth 1 https://github.com/wbthomason/packer.nvim\
-        ~/.local/share/nvim/site/pack/packer/start/packer.nvim   
-}
 
 
 aurinstall() {
@@ -264,7 +260,6 @@ sed -Ei "s/^#(ParallelDownloads).*/\1 = 5/;/^#Color$/s/#//" /etc/pacman.conf
 sed -i "s/-j2/-j$(nproc)/;/^#MAKEFLAGS/s/^#//" /etc/makepkg.conf
 
 manualinstall yay || error "Failed to install AUR helper."
-packerinstall
 
 # The command that does all the installing. Reads the progs.csv file and
 # installs each needed program the way required. Be sure to run this only after

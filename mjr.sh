@@ -148,26 +148,11 @@ gitmakeinstall() {
 	cd /tmp || return 1
 }
 
-
-
-
-gitmakeinstall() {
-	progname="${1##*/}"
-	progname="${progname%.git}"
-	dir="$repodir/$progname"
-	whiptail --title "MJR Installation" \
-		--infobox "Installing \`$progname\` ($n of $total) via \`git\` and \`make\`. $(basename "$1") $2" 8 70
-	sudo -u "$name" git -C "$repodir" clone --depth 1 --single-branch \
-		--no-tags -q "$1" "$dir" ||
-		{
-			cd "$dir" || return 1
-			sudo -u "$name" git pull --force origin master
-		}
-	cd "$dir" || exit 1
-	make >/dev/null 2>&1
-	make install >/dev/null 2>&1
-	cd /tmp || return 1
+packerinstall(){
+    git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+        ~/.local/share/nvim/site/pack/packer/start/packer.nvim   
 }
+
 
 aurinstall() {
 	whiptail --title "MJR Installation" \

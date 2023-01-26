@@ -82,7 +82,7 @@ refreshkeys() {
 	*systemd*)
 		whiptail --infobox "Refreshing Arch Keyring..." 7 40
         echo "[archlinuxcn]
-Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch" >> /etc/pacman.conf
+Server = https://mirrors.ustc.edu.cn/archlinuxcn/\$arch " >> /etc/pacman.conf
 		pacman --noconfirm -S archlinux-keyring archlinuxcn-keyring >/dev/null 2>&1
 		;;
 	*)

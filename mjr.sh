@@ -81,7 +81,9 @@ refreshkeys() {
 	case "$(readlink -f /sbin/init)" in
 	*systemd*)
 		whiptail --infobox "Refreshing Arch Keyring..." 7 40
-		pacman --noconfirm -S archlinux-keyring >/dev/null 2>&1
+        echo "[archlinuxcn]
+Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch" >> /etc/pacman.conf
+		pacman --noconfirm -S archlinux-keyring archlinuxcn-keyring >/dev/null 2>&1
 		;;
 	*)
 		whiptail --infobox "Enabling Arch Repositories..." 7 40
@@ -259,7 +261,10 @@ sed -Ei "s/^#(ParallelDownloads).*/\1 = 5/;/^#Color$/s/#//" /etc/pacman.conf
 # Use all cores for compilation.
 sed -i "s/-j2/-j$(nproc)/;/^#MAKEFLAGS/s/^#//" /etc/makepkg.conf
 
-manualinstall yay || error "Failed to install AUR helper."
+#install yay
+pacman --noconfirm --needed -S yay
+#manualinstall yay || error "Failed to install AUR helper."
+
 
 # The command that does all the installing. Reads the progs.csv file and
 # installs each needed program the way required. Be sure to run this only after

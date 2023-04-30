@@ -2,7 +2,7 @@
 
 ### OPTIONS AND VARIABLES ###
 
-dotfilesrepo="https://git.acwing.com/MasterJ/rice.git"
+dotfilesrepo="https://github.com/masterj122517/rice.git"
 progsfile="https://raw.githubusercontent.com/masterj122517/MJR/master/progs.csv"
 aurhelper="yay"
 repobranch="master"

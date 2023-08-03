@@ -81,20 +81,19 @@ refreshkeys() {
 	case "$(readlink -f /sbin/init)" in
 	*systemd*)
 		whiptail --infobox "Refreshing Arch Keyring..." 7 40
-        echo "[archlinuxcn]
-Server = https://mirrors.ustc.edu.cn/archlinuxcn/\$arch " >> /etc/pacman.conf
-		pacman --noconfirm -S archlinux-keyring archlinuxcn-keyring >/dev/null 2>&1
+		pacman --noconfirm -S archlinux-keyring >/dev/null 2>&1
 		;;
 	*)
-		whiptail --infobox "Enabling Arch Repositories..." 7 40
+		whiptail --infobox "Enabling Arch Repositories for more a more extensive software collection..." 7 40
 		if ! grep -q "^\[universe\]" /etc/pacman.conf; then
 			echo "[universe]
 Server = https://universe.artixlinux.org/\$arch
 Server = https://mirror1.artixlinux.org/universe/\$arch
 Server = https://mirror.pascalpuffke.de/artix-universe/\$arch
-Server = https://artixlinux.qontinuum.space/artixlinux/universe/os/\$arch
+Server = https://mirrors.qontinuum.space/artixlinux-universe/\$arch
 Server = https://mirror1.cl.netactuate.com/artix/universe/\$arch
-Server = https://ftp.crifo.org/artix-universe/" >>/etc/pacman.conf
+Server = https://ftp.crifo.org/artix-universe/\$arch
+Server = https://artix.sakamoto.pl/universe/\$arch" >>/etc/pacman.conf
 			pacman -Sy --noconfirm >/dev/null 2>&1
 		fi
 		pacman --noconfirm --needed -S \
@@ -262,8 +261,7 @@ sed -Ei "s/^#(ParallelDownloads).*/\1 = 5/;/^#Color$/s/#//" /etc/pacman.conf
 sed -i "s/-j2/-j$(nproc)/;/^#MAKEFLAGS/s/^#//" /etc/makepkg.conf
 
 #install yay
-pacman --noconfirm --needed -S yay
-#manualinstall yay || error "Failed to install AUR helper."
+manualinstall yay || error "Failed to install AUR helper."
 
 
 # The command that does all the installing. Reads the progs.csv file and

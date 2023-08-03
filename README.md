@@ -9,5 +9,13 @@ Hostname ssh.github.com
 Port 443
 User git
 ```
-
-
+请手动添加archlinuxcn源
+将此段加入 /etc/pacman.conf
+```
+[archlinuxcn]
+Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch
+```
+并
+```
+sudo pacman -Sy archlinuxcn-keyring
+```

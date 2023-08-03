@@ -121,8 +121,7 @@ manualinstall() {
 			sudo -u "$name" git pull --force origin master
 		}
 	cd "$repodir/$1" || exit 1
-	sudo -u "$name" -D "$repodir/$1" \
-		makepkg --noconfirm -si >/dev/null 2>&1 || return 1
+	sudo -u "$name" -D "$repodir/$1" \ makepkg --noconfirm -si >/dev/null 2>&1 || return 1
 }
 
 maininstall() {
@@ -247,6 +246,12 @@ ntpd -q -g >/dev/null 2>&1
 adduserandpass || error "Error adding username and/or password."
 
 [ -f /etc/sudoers.pacnew ] && cp /etc/sudoers.pacnew /etc/sudoers # Just in case
+
+# add archilnuxcn source 
+    echo "[archlinuxcn]
+Server = https://mirrors.ustc.edu.cn/archlinuxcn/\$arch " >> /etc/pacman.conf
+pacman --noconfirm -S archlinux-keyring archlinuxcn-keyring >/dev/null 2>&1
+
 
 # Allow user to run sudo without password. Since AUR programs must be installed
 # in a fakeroot environment, this is required for all builds with AUR.

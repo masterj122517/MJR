@@ -60,7 +60,6 @@ A,sc-im,is an Excel-like terminal spreadsheet manager.
 ,unzip,unzips zips.
 ,acpi,power.
 A,acpitool,power.
-,lynx,is a terminal browser.
 ,xcape,gives the special escape/super mappings of MJR.
 ,xclip,allows for copying and pasting from the command line.
 ,xdotool,provides window action utilities on the command line.
@@ -94,4 +93,5 @@ G,https://github.com/yaocccc/st.git,st terminal.
 A,fcitx5-input-support.
 ,lazygit,lazy-git.
 ,flameshot,screenshots.
+,exa,better version of ls.
 

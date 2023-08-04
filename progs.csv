@@ -90,7 +90,7 @@ G,https://github.com/yaocccc/st.git,st terminal.
 ,fcitx5-material-color,input method.
 ,fcitx5-im,input method.
 ,fcitx5-rime,input method. 
-A,fcitx5-input-support.
+A,fcitx5-input-support,help to setup fcitx5.
 ,lazygit,lazy-git.
 ,flameshot,screenshots.
 ,exa,better version of ls.

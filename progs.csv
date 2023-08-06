@@ -36,9 +36,6 @@ A,google-chrome,the default browser of MJR.
 ,ntfs-3g,allows accessing NTFS partitions.
 ,wireplumber,is the audio system.
 ,pipewire-pulse,gives pipewire compatibility with PulseAudio programs.
-,pipewire-jack,jack sound system.
-,qjackctl,gui set sound.
-,pavucontrol,set sound.
 ,os-prober,for dual boot.
 A,wqy-microhei,chinese fonts.
 ,wqy-bitmapfont,chinese fonts.

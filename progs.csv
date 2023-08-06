@@ -78,7 +78,7 @@ A,simple-mtpfs,enables the mounting of cell phones.
 A,htop-vim,is a graphical and colorful system monitor.
 G,https://git.acwing.com/MasterJ/dmenu.git,runs commands and provides a UI for selection.
 G,https://github.com/masterj122517/dwm.git,is the window manager.
-G,https://github.com/yaocccc/st.git,st terminal.
+G,https://github.com/masterj122517/st.git,st terminal.
 ,slock,"allows you to lock your computer, and quickly unlock with your password."
 ,socat,is a utility which establishes two byte streams and transfers data between them.
 ,moreutils,is a collection of useful unix tools.

@@ -93,4 +93,7 @@ A,fcitx5-input-support,help to setup fcitx5.
 ,exa,better version of ls.
 ,lsd,better version of ls with icons.
 A,dragon-drop,for drag files in ranger.
+,pipewire-jack,jack.
+,pipewire-alsa,alsa.
+,qjackctl,jack.
 

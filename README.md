@@ -19,3 +19,9 @@ Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch
 ```
 sudo pacman -Sy archlinuxcn-keyring
 ```
+
+please install "daed" for yourself which is a app for proxy
+
+```
+sudo pacman -S daed
+```

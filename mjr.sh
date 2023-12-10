@@ -133,7 +133,8 @@ installYay() {
         echo "[archlinuxcn]" >> /etc/pacman.conf
         echo "Server = https://mirrors.ustc.edu.cn/archlinuxcn/\$arch" >> /etc/pacman.conf
     fi
-    pacman --noconfirm --needed -Sy archlinuxcn-keyring yay 
+    pacman --noconfirm -Sy archlinuxcn-keyring 
+    pacman --noconfirm -S yay
 }
 
 maininstall() {

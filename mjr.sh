@@ -112,7 +112,8 @@ Include = /etc/pacman.d/mirrorlist-arch" >>/etc/pacman.conf
 manualinstall() {
 	# Installs $1 manually. Used only for AUR helper here.
 	# Should be run after repodir is created and var is set.
-	whiptail --infobox "Installing \"$1\", an AUR helper..." 7 50
+	pacman -Qq "$1" && return 0
+	whiptail --infobox "Installing \"$1\" manually." 7 50
 	sudo -u "$name" mkdir -p "$repodir/$1"
 	sudo -u "$name" git -C "$repodir" clone --depth 1 --single-branch \
 		--no-tags -q "https://aur.archlinux.org/$1.git" "$repodir/$1" ||
@@ -124,6 +125,7 @@ manualinstall() {
 	sudo -u "$name" -D "$repodir/$1" \
 		makepkg --noconfirm -si >/dev/null 2>&1 || return 1
 }
+
 
 maininstall() {
 	# Installs all needed programs from main repo.

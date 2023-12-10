@@ -18,6 +18,7 @@
 ,exfat-utils,allows management of FAT drives.
 ,sxiv,is a minimalist image viewer.
 ,openssh,ssh.
+,go,golang.
 ,xwallpaper,sets the wallpaper.
 ,ffmpeg,can record and splice video and audio on the command line.
 ,ffmpegthumbnailer,creates thumbnail previews of video files.

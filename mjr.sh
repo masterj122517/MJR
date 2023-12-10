@@ -127,6 +127,15 @@ manualinstall() {
 }
 
 
+installYay() {
+    # install aur helper
+    if ! grep -q "\[archlinuxcn\]" /etc/pacman.conf; then
+        echo "[archlinuxcn]" >> /etc/pacman.conf
+        echo "Server = https://mirrors.ustc.edu.cn/archlinuxcn/\$arch" >> /etc/pacman.conf
+    fi
+    pacman --noconfirm --needed -Sy archlinuxcn-keyring yay 
+}
+
 maininstall() {
 	# Installs all needed programs from main repo.
 	whiptail --title "MJR Installation" --infobox "Installing \`$1\` ($n of $total). $1 $2" 9 70
@@ -263,7 +272,8 @@ sed -Ei "s/^#(ParallelDownloads).*/\1 = 5/;/^#Color$/s/#//" /etc/pacman.conf
 sed -i "s/-j2/-j$(nproc)/;/^#MAKEFLAGS/s/^#//" /etc/makepkg.conf
 
 #install yay
-manualinstall yay || error "Failed to install AUR helper."
+#manualinstall yay || error "Failed to install AUR helper."
+installYay || error "Failed to install AUR helper."
 
 
 # The command that does all the installing. Reads the progs.csv file and

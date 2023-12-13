@@ -135,7 +135,7 @@ installYay() {
     fi
 
     pacman --noconfirm -Sy archlinuxcn-keyring >/dev/null 2>&1
-    pacman --noconfirm -Sq yay
+    pacman --noconfirm -S yay
 }
 
 maininstall() {

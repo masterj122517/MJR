@@ -132,6 +132,7 @@ installYay() {
     if ! grep -q "\[archlinuxcn\]" /etc/pacman.conf; then
         echo "[archlinuxcn]" >> /etc/pacman.conf
         echo "Server = https://mirrors.ustc.edu.cn/archlinuxcn/\$arch" >> /etc/pacman.conf
+        echo "SigLevel = Never" >> /etc/pacman.conf
     fi
 
     pacman --noconfirm -Sy archlinuxcn-keyring >/dev/null 2>&1

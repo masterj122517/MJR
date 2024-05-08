@@ -20,6 +20,7 @@
 ,sxiv,is a minimalist image viewer.
 ,openssh,ssh.
 ,go,golang.
+,tmux,tmux.
 ,xwallpaper,sets the wallpaper.
 ,ffmpeg,can record and splice video and audio on the command line.
 ,ffmpegthumbnailer,creates thumbnail previews of video files.
